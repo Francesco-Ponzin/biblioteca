@@ -2,9 +2,11 @@
     <img src={{coverUrl}} >
 
     <div>
+        <span class="code">{{book.ISBN}}</span>
         <span class="info">{{book.title}}</span>
         <span class="info">{{book.author}}</span>
         <span class="code">{{book.publisher}}</span>
+        <span class="code">{{book.publicationDate| date:'MMMM yyyy'}}</span>
 
     </div>
 </div>
