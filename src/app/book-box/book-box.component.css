@@ -38,5 +38,6 @@
 
 .detailBox > img{
 
-    height: 8em;
+    height: 10em;
+    margin-top: 0.3em;
 }
