@@ -16,7 +16,7 @@ export class AddBookComponent implements OnInit {
     title: "titolo",
     author: "autore",
     publisher: "editore",
-    publicationData: new Date(),
+    publicationDate: new Date(),
     coverUrl: "/assets/favicon.ico"
   };
 

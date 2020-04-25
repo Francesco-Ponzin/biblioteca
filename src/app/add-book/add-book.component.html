@@ -1,11 +1,11 @@
 <h2>{{title}}</h2>
 
-<input type="text" name="title" id="title" [(ngModel)]="newBook.ISBN">
+<input type="text" name="ISBN" id="ISBN" [(ngModel)]="newBook.ISBN">
 <input type="text" name="title" id="title" [(ngModel)]="newBook.title">
-<input type="text" name="title" id="title" [(ngModel)]="newBook.author">
-<input type="text" name="title" id="title" [(ngModel)]="newBook.publisher">
-<input type="date" name="title" id="title" [(ngModel)]="newBook.publicationData">
-<input type="text" name="title" id="title" [(ngModel)]="newBook.coverUrl">
+<input type="text" name="author" id="author" [(ngModel)]="newBook.author">
+<input type="text" name="publisher" id="publisher" [(ngModel)]="newBook.publisher">
+<input type="date" name="publicationDate" id="publicationDate" [(ngModel)]="newBook.publicationDate">
+<input type="text" name="coverUrl" id="coverUrl" [(ngModel)]="newBook.coverUrl">
 <input type="button" value="aggiungi" (click)="add()">
 
 
