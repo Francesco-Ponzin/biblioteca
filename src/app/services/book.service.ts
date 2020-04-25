@@ -57,5 +57,8 @@ export class BookService {
     return of(this.books);
   }
 
+  addBook(book: Book){
+    this.books.push(book);
+  } 
 
 }

@@ -1,1 +1,11 @@
-<p>add-book works!</p>
+<h2>{{title}}</h2>
+
+<input type="text" name="title" id="title" [(ngModel)]="newBook.ISBN">
+<input type="text" name="title" id="title" [(ngModel)]="newBook.title">
+<input type="text" name="title" id="title" [(ngModel)]="newBook.author">
+<input type="text" name="title" id="title" [(ngModel)]="newBook.publisher">
+<input type="date" name="title" id="title" [(ngModel)]="newBook.publicationData">
+<input type="text" name="title" id="title" [(ngModel)]="newBook.coverUrl">
+<input type="button" value="aggiungi" (click)="add()">
+
+
