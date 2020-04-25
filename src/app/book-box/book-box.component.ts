@@ -12,7 +12,12 @@ export class BookBoxComponent implements OnInit {
 
   @Input() book:Book;
 
+  coverUrl: String; 
+
   ngOnInit(): void {
+  this.coverUrl   = (this.book.coverUrl == ""?"/assets/favicon.ico":this.book.coverUrl)
+
+
   }
 
 }

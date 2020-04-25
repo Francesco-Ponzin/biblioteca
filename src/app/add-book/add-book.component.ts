@@ -11,13 +11,22 @@ export class AddBookComponent implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-  voidBook: Book = {
+  placeholderBook: Book = {
     ISBN: "isbn code",
     title: "titolo",
     author: "autore",
     publisher: "editore",
     publicationDate: new Date(),
     coverUrl: "/assets/favicon.ico"
+  };
+
+  voidBook: Book = {
+    ISBN: "",
+    title: "",
+    author: "",
+    publisher: "",
+    publicationDate: new Date(),
+    coverUrl: ""
   };
 
   title: string = "aggiungi un libro";
