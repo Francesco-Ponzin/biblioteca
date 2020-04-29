@@ -52,6 +52,7 @@ export class BookService {
     }
   ]
 
+  selectedBook: Book;
 
   getBooks(): Observable<Book[]> {
     return of(this.books);

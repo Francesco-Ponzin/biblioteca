@@ -1,0 +1,13 @@
+<div *ngIf="bookService.selectedBook">
+
+<div class="addbox">
+<div><label for="ISBN">ISBN: </label><input type="text" name="ISBN" id="ISBN" [(ngModel)]="bookService.selectedBook.ISBN"></div>
+<div><label for="title">Titolo: </label><input type="text" name="title" id="title" [(ngModel)]="bookService.selectedBook.title"></div>
+<div><label for="author">Autore: </label><input type="text" name="author" id="author" [(ngModel)]="bookService.selectedBook.author"></div>
+<div><label for="publisher">Editore: </label><input type="text" name="publisher" id="publisher" [(ngModel)]="bookService.selectedBook.publisher"></div>
+<div><label for="publicationDate">Data di pubblicazione: </label><input type="date" name="publicationDate" id="publicationDate" [(ngModel)]="bookService.selectedBook.publicationDate"></div>
+<div><label for="coverUrl">Copertina (opzionale): </label><input type="text" name="coverUrl" id="coverUrl" [(ngModel)]="bookService.selectedBook.coverUrl"></div>
+</div>
+<input type="button" value="salva modifiche" (click)="save()" class="submit">
+
+</div>
