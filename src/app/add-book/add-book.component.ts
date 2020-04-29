@@ -11,35 +11,32 @@ export class AddBookComponent implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-
   title: string = "aggiungi un libro";
   newBook: Book;
+
+  ngOnInit(): void {
+    this.newBook = {
+      ISBN: "",
+      title: "",
+      author: "",
+      publisher: "",
+      publicationDate: new Date(),
+      coverUrl: ""
+    };
+
+  }
+
 
   add() {
     this.bookService.addBook(this.newBook);
     this.newBook = {
-    ISBN: "",
-    title: "",
-    author: "",
-    publisher: "",
-    publicationDate: new Date(),
-    coverUrl: ""
-  };
-
-
-  }
-
-  ngOnInit(): void {
-    this.newBook = {
-    ISBN: "",
-    title: "",
-    author: "",
-    publisher: "",
-    publicationDate: new Date(),
-    coverUrl: ""
-  };
-
-
+      ISBN: "",
+      title: "",
+      author: "",
+      publisher: "",
+      publicationDate: new Date(),
+      coverUrl: ""
+    };
   }
 
 }
