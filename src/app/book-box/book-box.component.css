@@ -42,7 +42,6 @@
     margin-top: 0.3em;
 }
 
-.detailBox input{
-    width: fit-content;
+.detailBox .controls{
     margin-top: 0.3em;
 }
