@@ -15,6 +15,11 @@ export class AddBookComponent implements OnInit {
   newBook: Book;
 
   ngOnInit(): void {
+   this.reset();
+
+  }
+
+  reset():void{
     this.newBook = {
       ISBN: "",
       title: "",
@@ -23,20 +28,12 @@ export class AddBookComponent implements OnInit {
       publicationDate: new Date(),
       coverUrl: ""
     };
-
   }
 
 
   add() {
     this.bookService.addBook(this.newBook);
-    this.newBook = {
-      ISBN: "",
-      title: "",
-      author: "",
-      publisher: "",
-      publicationDate: new Date(),
-      coverUrl: ""
-    };
+    this.reset();
   }
 
 }
