@@ -10,7 +10,11 @@ export class BookService {
 
   constructor(private localStorage:LocalStorageService) { }
 
-  books: Book[] = [
+
+
+  books: Book[]; 
+
+  BOOKS = [
     {
       ISBN: "9780060012359",
       title: "The Amazing Maurice and His Educated Rodents",
@@ -56,11 +60,29 @@ export class BookService {
   selectedBook: Book;
 
   getBooks(): Observable<Book[]> {
+
+    
+    this.books = this.localStorage.retrieve("books") || this.BOOKS;
     return of(this.books);
   }
 
   addBook(book: Book){
     this.books.push(book);
+    this.saveBookInLocalStorage();
   } 
 
+  saveBookInLocalStorage():void{
+        this.localStorage.store("books", this.books);
+
+  }
+
+  deleteBook(toDelete:Book){
+    for (let i = 0; i < this.books.length; i++) {
+      if(this.books[i] == toDelete){
+        this.books.splice(i,1);
+      }
+    }
+    this.saveBookInLocalStorage();
+
+  }
 }
