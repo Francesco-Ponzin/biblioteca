@@ -6,7 +6,7 @@
     padding: 1em;
     display: flex;
     flex-direction: row;
-    width: 23em;
+    width: 22em;
     margin: 0.2em;
     height: 14em;
 
@@ -42,7 +42,6 @@
     margin-top: 0.3em;
 }
 
-.detailBox input{
-    width: fit-content;
+.detailBox .controls{
     margin-top: 0.3em;
 }
