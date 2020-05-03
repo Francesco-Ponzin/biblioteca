@@ -45,3 +45,15 @@
 .detailBox .controls{
     margin-top: 0.3em;
 }
+
+button{
+    border: none;
+    text-transform: none;
+    margin: 0.5em 1em 0 0;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    color: brown;
+    font: inherit;
+    cursor: pointer;
+}
