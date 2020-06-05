@@ -9,7 +9,6 @@
     width: 22em;
     margin: 0.2em;
     height: 14em;
-
 }
 
 .detailBox > div{
@@ -56,4 +55,10 @@ button{
     color: brown;
     font: inherit;
     cursor: pointer;
+}
+
+@media (max-width: 400px){
+    .detailBox{
+        font-size: 0.7em;
+    }
 }
