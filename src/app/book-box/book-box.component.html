@@ -1,5 +1,5 @@
 <div class="detailBox">
-    <img [src]="coverUrl" >
+    <img [src]="coverUrl">
 
     <div>
         <span class="code">{{book.ISBN}}</span>
@@ -7,7 +7,11 @@
         <span class="info">{{book.author}}</span>
         <span class="code">{{book.publisher}}</span>
         <span class="code">{{book.publicationDate| date:'MMMM yyyy'}}</span>
-        <input type="button" value="modifica" (click)="editBook(book)">
+        <span class="controls">
+            <button (click)="editBook(book)">modifica</button>
+            <button (click)="deleteBook(book)">elimina</button>
+        </span>
+
 
     </div>
 </div>

@@ -1,11 +1,11 @@
 <h2>{{title}}</h2>
 <div class="addbox">
-<div><label for="ISBN">ISBN: </label><input type="text" name="ISBN" id="ISBN" [(ngModel)]="newBook.ISBN"></div>
-<div><label for="title">Titolo: </label><input type="text" name="title" id="title" [(ngModel)]="newBook.title"></div>
-<div><label for="author">Autore: </label><input type="text" name="author" id="author" [(ngModel)]="newBook.author"></div>
-<div><label for="publisher">Editore: </label><input type="text" name="publisher" id="publisher" [(ngModel)]="newBook.publisher"></div>
-<div><label for="publicationDate">Data di pubblicazione: </label><input type="date" name="publicationDate" id="publicationDate" [(ngModel)]="newBook.publicationDate"></div>
-<div><label for="coverUrl">Copertina (opzionale): </label><input type="text" name="coverUrl" id="coverUrl" [(ngModel)]="newBook.coverUrl"></div>
+<div><label for="ISBN">ISBN: </label><input type="text" name="ISBN" id="ISBN" [(ngModel)]="newBook.ISBN" [class.error]="error.ISBN" [attr.placeholder]="error.ISBN?' 13 cifre':' codice ISBN'"></div>
+<div><label for="title">Titolo: </label><input type="text" name="title" id="title" [(ngModel)]="newBook.title" [class.error]="error.title" [attr.placeholder]="error.title?' campo obbligatorio':' titolo'"></div>
+<div><label for="author">Autore: </label><input type="text" name="author" id="author" [(ngModel)]="newBook.author" [class.error]="error.author"  [attr.placeholder]="error.author?' campo obbligatorio':' autore'"></div>
+<div><label for="publisher">Editore: </label><input type="text" name="publisher" id="publisher" [(ngModel)]="newBook.publisher" [class.error]="error.publisher"  [attr.placeholder]="error.publisher?' campo obbligatorio':' editore'"></div>
+<div><label for="publicationDate">Data di pubblicazione: </label><input type="date" name="publicationDate" id="publicationDate" [(ngModel)]="newBook.publicationDate" [class.error]="error.publicationDate"></div>
+<div><label for="coverUrl">Copertina (opzionale): </label><input type="text" name="coverUrl" id="coverUrl" [(ngModel)]="newBook.coverUrl" [class.error]="error.coverUrl" [attr.placeholder]="error.coverUrl?' campo obbligatorio':' URL dell\'immagine'"></div>
 </div>
 <input type="button" value="aggiungi" (click)="add()" class="submit">
 

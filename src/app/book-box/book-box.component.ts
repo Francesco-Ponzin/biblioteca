@@ -27,5 +27,9 @@ export class BookBoxComponent implements OnInit {
   
   }
 
+  deleteBook(book: Book):void{
+    this.bookService.deleteBook(book);
+  }
+
 
 }

@@ -15,6 +15,7 @@ export class EditBookComponent implements OnInit {
 
   save(): void{
     this.bookService.selectedBook = null;
+    this.bookService.saveBookInLocalStorage();
   }
 
 
